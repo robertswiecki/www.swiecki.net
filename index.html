@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Swiecki - AI/ML Systems Security Leadership</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="brand">Robert Swiecki</a>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html" class="active">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="software.html">Software</a></li>
+                    <li><a href="articles.html">Articles</a></li> 
+                    <li><a href="talks.html">Talks</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="card hero">
+            <div class="hero-content">
+                <p class="eyebrow">AI/ML Systems Security Lead &middot; Google</p>
+                <h1 class="page-title">Robert Swiecki</h1>
+                <p class="hero-lede">I lead Google's AI/ML Systems Security group. We secure foundational models and the compute stack behind them. I have spent 25 years in systems security, from vulnerability research to building the defenses that run in production.</p>
+                <div class="hero-focus">
+                    <div>
+                        <span class="meta-label">Current Focus</span>
+                        <p>Confidential compute for training workloads, protecting model supply chains, and stress-testing new AI attack paths with red teams.</p>
+                    </div>
+                    <div>
+                        <span class="meta-label">Previous</span>
+                        <p>Built and ran Google's software isolation and fuzzing teams, landing sandboxing frameworks and thousands of bug fixes before attackers.</p>
+                    </div>
+                </div>
+                <ul class="hero-links">
+                    <li><a class="chip" href="mailto:robert@swiecki.net">Email</a></li>
+                    <li><a class="chip" href="https://www.linkedin.com/in/jagger">LinkedIn</a></li>
+                    <li><a class="chip" href="research.html">Research</a></li>
+                    <li><a class="chip" href="software.html">Software</a></li>
+                </ul>
+            </div>
+            <aside class="hero-aside">
+                <div class="hero-image">
+                    <img src="resources/me.png" alt="Robert Swiecki">
+                </div>
+                <dl class="profile-meta">
+                    <div>
+                        <dt>Location</dt>
+                        <dd>Zurich, Switzerland</dd>
+                    </div>
+                    <div>
+                        <dt>Experience</dt>
+                        <dd>25+ years in security engineering, 18+ at Google</dd>
+                    </div>
+                    <div>
+                        <dt>Languages</dt>
+                        <dd>English &middot; German &middot; Polish</dd>
+                    </div>
+                    <div>
+                        <dt>Community</dt>
+                        <dd><a href="http://dragonsector.pl">Dragon Sector CTF</a></dd>
+                    </div>
+                </dl>
+                <div class="reference-links">
+                    <span class="meta-label">Selected References</span>
+                    <ul>
+                        <li><a href="https://research.google/people/RobertSwiecki/">Google Research profile</a></li>
+                        <li><a href="https://github.com/google/honggfuzz">Honggfuzz on GitHub</a></li>
+                        <li><a href="https://www.theregister.com/2016/03/06/amd_microcode_6000836_fix/">The Register on AMD microcode research</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Leadership &amp; Impact</h2>
+            <ul class="impact-list">
+                <li>
+                    <h3>Securing Foundational AI at Scale</h3>
+                    <p>Set the security plan for Google's core models and training infrastructure by combining confidential compute, model provenance checks, and hands-on red teaming.</p>
+                </li>
+                <li>
+                    <h3>Building High-Performing Security Teams</h3>
+                    <p>Grew engineering teams across Zurich, Mountain View, and Warsaw, pairing systems specialists with ML experts and holding them to clear threat reduction targets.</p>
+                </li>
+                <li>
+                    <h3>Shipping Production Isolation Frameworks</h3>
+                    <p>Launched sandboxing, syscall mediation, and hardening layers that protect major Google workloads, including Sandboxed API for running risky code with least privilege.</p>
+                </li>
+                <li>
+                    <h3>Critical Vulnerabilities Eliminated Pre-Launch</h3>
+                    <p>Pushed fuzzing and review programs that uncovered critical flaws in OpenSSL, the Linux kernel, browsers, and internal stacks before they shipped.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Flagship Projects</h2>
+            <div class="tool-grid">
+                <article class="tool-card">
+                    <h3>Honggfuzz</h3>
+                    <p>Feedback-guided fuzzer used across Google. Handles multi-core workloads, hardware tracing, and corpus minimization to keep bug finds steady.</p>
+                    <a class="inline-link" href="https://github.com/google/honggfuzz">github.com/google/honggfuzz</a>
+                </article>
+                <article class="tool-card">
+                    <h3>NsJail</h3>
+                    <p>Linux namespace-based jail for running untrusted code, CTF tasks, and production prototypes. Ships with flexible seccomp policies through the kafel DSL.</p>
+                    <a class="inline-link" href="https://github.com/google/nsjail">github.com/google/nsjail</a>
+                </article>
+                <article class="tool-card">
+                    <h3>Sandboxed API &amp; Sandbox2</h3>
+                    <p>Composable runtime that lets teams execute high-risk code inside hardened compartments with low integration effort. Runs in latency-sensitive services and ML pipelines.</p>
+                    <a class="inline-link" href="https://github.com/google/sandboxed-api">github.com/google/sandboxed-api</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Recognition &amp; Community</h2>
+            <ul class="impact-list impact-list--compact">
+                <li>
+                    <h3>Pwnie Award Nominations</h3>
+                    <p>Recognized in 2016 and 2017 for AMD microcode privilege escalation work and for uncovering the first OpenSSL flaw rated 'critical'.</p>
+                </li>
+                <li>
+                    <h3>Dragon Sector CTF Founder</h3>
+                    <p>Co-founded and mentor Dragon Sector, a long-running competitive security team focused on new exploitation techniques and tooling.</p>
+                </li>
+                <li>
+                    <h3>Practical Reverse Engineering</h3>
+                    <p>Co-authored the Polish edition of 'Practical Reverse Engineering', turning advanced reversing techniques into practical guidance.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="card contact-card">
+            <h2 class="section-title">Connect</h2>
+            <div class="contact-grid">
+                <div>
+                    <span class="meta-label">Email</span>
+                    <a href="mailto:robert@swiecki.net">robert@swiecki.net</a>
+                </div>
+                <div>
+                    <span class="meta-label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/jagger">linkedin.com/in/jagger</a>
+                </div>
+                <div>
+                    <span class="meta-label">X (Twitter)</span>
+                    <a href="https://x.com/robertswiecki">@robertswiecki</a>
+                </div>
+                <div>
+                    <span class="meta-label">Mastodon</span>
+                    <a href="https://infosec.exchange/@robertswiecki">@robertswiecki@infosec.exchange</a>
+                </div>
+                <div>
+                    <span class="meta-label">Talks &amp; Articles</span>
+                    <a href="talks.html">Talks archive</a> &middot; <a href="articles.html">Articles</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Robert Swiecki</p>
+        </div>
+    </footer>
+</body>
+</html>

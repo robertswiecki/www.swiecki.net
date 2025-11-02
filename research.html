@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Swiecki - Security Research</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="brand">Robert Swiecki</a>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="research.html" class="active">Research</a></li>
+                    <li><a href="software.html">Software</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="talks.html">Talks</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h1 class="page-title">Security Research</h1>
+        <div class="card">
+            <h2 class="card-header">A Quick Note</h2>
+            <p>Over the course of the last decade or so, I discovered and reported dozens of security bugs in popular software packages. By necessity, the list below contains just a subset of those; multiple security reports had never gotten a CVE number assigned to them for various reasons.</p>
+            <p>I generally focus on low-level application security, and that covers projects like: the Linux kernel, various input parsing libraries (images, PDF, media, etc.), web browsers, system services, and Internet network services. The most frequent tool I use to discover software flaws is <strong><a href="software.html">Honggfuzz</a></strong>.</p>
+        </div>
+        <div class="card">
+            <h2 class="card-header">Trivia</h2>
+            <p>In 2016, I was nominated for a <strong><a href="https://en.wikipedia.org/wiki/Pwnie_Awards">Pwnie Award</a></strong> for publishing a flaw in AMD CPUs. The flaw enabled unprivileged users of a VM to execute code at the host's CPU ring0. <a href="http://www.theregister.co.uk/2016/03/06/amd_microcode_6000836_fix/">The Register</a> published a short article on how the bug was discovered.</p>
+            <p>Again, in 2017 I was nominated for the same <strong><a href="https://en.wikipedia.org/wiki/Pwnie_Awards">Pwnie Award</a></strong> for finding a <a href="https://www.openssl.org/news/secadv/20160926.txt">vulnerability in the OpenSSL suite (pre-auth)</a> which potentially allowed for remote code execution.</p>
+        </div>
+        <div class="card">
+            <h2 class="card-header">Vulnerability Disclosures</h2>
+            <ul class="research-list">
+                <li>
+                    <span class="vuln-title">Memory OOB read (remote DoS) in <b>OpenSSL</b></span>
+                    <span class="vuln-links"><a href="https://www.openssl.org/news/secadv/20170126.txt">CVE-2017-3731</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title">Memory OOB read (remote DoS) in <b>OpenSSL</b></span>
+                    <span class="vuln-links"><a href="https://www.openssl.org/news/secadv/20161110.txt">CVE-2016-7054</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title">Memory Use-after-Free (potential remote RCE) in <b>OpenSSL</b></span>
+                    <span class="vuln-links"><a href="https://www.openssl.org/news/secadv/20160926.txt">CVE-2016-6309</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title">Pre-auth crash (privsep) in <b>OpenSSH</b></span>
+                    <span class="vuln-links"><a href="https://anongit.mindrot.org/openssh.git/commit/?id=28652bca29046f62c7045e933e6b931de1d16737">Git commit</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title"><b>AMD CPUs</b> microcode privilege escalation (guest VM to host ring0)</span>
+                    <span class="vuln-links"><a href="http://www.theregister.co.uk/2016/03/06/amd_microcode_6000836_fix/">The Register</a> • <a href="https://lists.debian.org/debian-security/2016/03/msg00084.html">Debian</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title"><b>Avast for Linux</b> heap corruption</span>
+                    <span class="vuln-links"><span>TYA-410-45475</span></span>
+                </li>
+                <li>
+                    <span class="vuln-title">Memory OOB read (remote DoS) in <b>OpenSSL</b></span>
+                    <span class="vuln-links"><a href="https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2015-1789">CVE-2015-1789</a> • <a href="https://www.openssl.org/news/secadv/20150611.txt">OpenSSL sec-adv</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title"><b>Adobe Flash</b> memory corruption</span>
+                    <span class="vuln-links"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0316">CVE-2015-0316</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title">Multiple RCE problems in <b>IDA Pro</b></span>
+                    <span class="vuln-links"><a href="https://www.hex-rays.com/bugbounty.shtml">HexRays</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title"><b>Linux kernel</b> local privilege escalation, plus an Oops</span>
+                    <span class="vuln-links"><a href="https://security-tracker.debian.org/tracker/CVE-2014-7826">CVE-2014-7826</a> • <a href="https://security-tracker.debian.org/tracker/CVE-2014-7825">CVE-2014-7825</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title">Multiple flaws in the <b>Linux kernel</b></span>
+                    <span class="vuln-links"><span>CVE-2011-2184 • CVE-2011-1593 • CVE-2011-2496</span></span>
+                </li>
+                <li>
+                    <span class="vuln-title">Multiple bugs in the <b>Freetype</b> library</span>
+                    <span class="vuln-links"><span>CVE-2010-2497 • CVE-2010-2498 • CVE-2010-2499 • CVE-2010-2500 • CVE-2010-2519 • CVE-2010-2520 • CVE-2010-2527</span></span>
+                </li>
+                <li>
+                    <span class="vuln-title">Universal XSS in Apple <b>Safari 3.1</b></span>
+                    <span class="vuln-links"><span>CVE-2008-1025</span> • <a href="http://support.apple.com/kb/HT1467">Apple's advisory</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title">Universal XSS in Apple <b>Safari 3.0.4</b></span>
+                    <span class="vuln-links"><span>CVE-2008-1002</span> • <a href="http://docs.info.apple.com/article.html?artnum=307563">Apple's advisory</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title"><b>Linux kernel</b> local privilege escalation exploit</span>
+                    <span class="vuln-links"><a href="http://seclists.org/bugtraq/2007/Sep/0363.html">Bugtraq</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title"><b>Konqueror 3.5</b> address bar spoofing</span>
+                    <span class="vuln-links"><span>CVE-2007-4224 • CVE-2007-4225</span> • <a href="http://www.securityfocus.com/archive/1/475689/30/0/threaded">Bugtraq</a> • <a href="http://www.securityfocus.com/bid/25219">Bugtraq</a> • <a href="http://secunia.com/advisories/26351/">Secunia</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title"><b>Opera 9</b> data: URI address bar spoofing</span>
+                    <span class="vuln-links"><span>CVE-2007-3819</span> • <a href="http://www.opera.com/support/search/view/863/">Opera</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title"><b>Konqueror 3.5</b> "data:" URI address bar spoofing</span>
+                    <span class="vuln-links"><span>CVE-2007-3820</span></span>
+                </li>
+                <li>
+                    <span class="vuln-title"><b>Apple Safari 3.0.2</b> beta for Windows IDN spoofing</span>
+                    <span class="vuln-links"><a href="http://www.securityfocus.com/bid/24636">Bugtraq</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title"><b>Apple Safari 3.0.1</b> beta for Windows URL bar spoofing</span>
+                    <span class="vuln-links"><span>CVE-2007-2398</span> • <a href="http://www.securityfocus.com/archive/1/471452/30/0/threaded">Bugtraq</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title"><b>Apple Safari 3.0 beta</b> for Windows arbitrary cookie leak</span>
+                    <span class="vuln-links"><span>CVE-2007-2391</span> • <a href="http://www.securityfocus.com/archive/1/471255/30/0/threaded">Bugtraq</a></span>
+                </li>
+                <li>
+                    <span class="vuln-title"><b>Linux kernel 2.6.20</b> DCCP Memory Disclosure Vulnerability</span>
+                    <span class="vuln-links"><span>CVE-2007-1734</span> • <a href="http://www.frsirt.com/english/advisories/2007/1143">FrSIRT</a> • <a href="http://www.securityfocus.com/archive/1/archive/1/463934/100/0/threaded">Bugtraq</a></span>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Robert Swiecki</p>
+        </div>
+    </footer>
+</body>
+</html>
